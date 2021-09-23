@@ -26,15 +26,22 @@ class App extends Component {
     )  
   }
 
-  handleChange = (e) => {
-    this.setState({ searchField: e.target.value, title: event.target.value })
+  // handleChange = (e) => {
+  //   this.setState({ searchField: e.target.value, title: event.target.value })
+  // }
+
+  onSearchChange = event => {
+    this.setState({
+      searchField: event.target.value,
+      title: event.target.value
+    })
   }
 
   render() {
     const { monsters, searchField, title } = this.state;
     // const filteredMonsters = monsters.filter(
     //   monster => monster.name.toLowerCase().includes(searchField.toLowerCase())
-    )
+    // )
     return(
       <div className="App">
       <h1> {title} </h1>
