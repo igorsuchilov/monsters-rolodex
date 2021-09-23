@@ -34,8 +34,8 @@ class App extends Component {
     this.setState({
       searchField: event.target.value,
       title: event.target.value
-    })
-  }
+    });
+  };
 
   render() {
     const { monsters, searchField, title } = this.state;
@@ -44,7 +44,7 @@ class App extends Component {
     // )
     return(
       <div className="App">
-      <h1> {title} </h1>
+      <h1> { title } </h1>
       <SearchBox onSearchChange = {this.onSearchChange}
         // placeholder = 'search monsters'
         // handleChange =  {this.handleChange}
